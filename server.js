@@ -4,7 +4,7 @@ const urlRoute = require("./src/routes/urlRoute");
 require('dotenv').config()
 
 const app = express();
-const PORT = 80;
+const PORT = 8080;
 
 connectDB(process.env.MONGO_URI);
 
