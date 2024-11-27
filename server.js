@@ -1,11 +1,12 @@
 const express = require("express");
 const connectDB = require("./connect");
 const urlRoute = require("./src/routes/urlRoute");
+require('dotenv').config()
 
 const app = express();
 const PORT = 8080;
 
-connectDB("mongodb://localhost:27017/url-shortener");
+connectDB(process.env.MONGO_URI);
 
 app.use(express.json());
 app.use("/", urlRoute);
