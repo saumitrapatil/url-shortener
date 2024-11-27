@@ -1,9 +1,8 @@
 const app = require('./app');
 const connectDB = require("./connect");
-
 require('dotenv').config()
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 connectDB(process.env.MONGO_URI);
 
